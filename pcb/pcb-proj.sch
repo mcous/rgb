@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tue 30 Apr 2013 11:46:32 PM CDT
+EESchema Schematic File Version 2  date Wed 01 May 2013 04:01:29 PM CDT
 LIBS:rgb_comp-lib
 LIBS:power
 LIBS:device
@@ -30,7 +30,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-EELAYER 43  0
+LIBS:pcb-proj-cache
+EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
