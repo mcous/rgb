@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: Wed 01 May 2013 07:42:48 PM CDT
+EESchema-DOCLIB  Version 2.0  Date: Thu 02 May 2013 12:47:46 AM CDT
 #
 $CMP ATMEGA328P
 D ATMega328P Low-power High-performance MCU
@@ -47,6 +47,11 @@ $CMP TLC5940
 D TI TLC5940 16-channel LED Driver with Dot-correction and Greyscale PWM Brightness control
 K LED Driver 16 PWM
 F http://www.ti.com/lit/ds/symlink/tlc5940.pdf
+$ENDCMP
+#
+$CMP VCC_REG
+D 3-pin Voltage Regulator
+K voltage VCC regulator
 $ENDCMP
 #
 #End Doc Library
