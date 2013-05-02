@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: Wed 01 May 2013 12:27:38 PM CDT
+EESchema-DOCLIB  Version 2.0  Date: Wed 01 May 2013 07:42:48 PM CDT
 #
 $CMP ATMEGA328P
 D ATMega328P Low-power High-performance MCU
@@ -6,10 +6,41 @@ K ATMega 328 328P AVR
 F http://www.atmel.com/Images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A-48PA-88A-88PA-168A-168PA-328-328P_datasheet.pdf
 $ENDCMP
 #
+$CMP AVR_ISP
+D ISP Header
+K ISP
+$ENDCMP
+#
+$CMP C
+D Non-polarized Capacitor
+K cap capacitor
+$ENDCMP
+#
 $CMP CREE-CLV6A-FKB
 D Cree SMD PLCC-6 RGB LED
 K RGB LED SMD
 F http://www.cree.com/~/media/Files/Cree/LED%20Components%20and%20Modules/HB/Data%20Sheets/CLV6AFKB.pdf
+$ENDCMP
+#
+$CMP CRYSTAL
+D Crystal
+K chrystal xtal oscillator
+$ENDCMP
+#
+$CMP LED
+D Light Emitting Diode
+K LED
+$ENDCMP
+#
+$CMP R
+D Resistor
+K R Resistor
+$ENDCMP
+#
+$CMP SPST
+D Single Pole Single Throw Pushbutton
+K SPST button
+F http://www.sparkfun.com/datasheets/Components/Buttons/SMD-Button.pdf
 $ENDCMP
 #
 $CMP TLC5940

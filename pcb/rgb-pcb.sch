@@ -1,0 +1,426 @@
+EESchema Schematic File Version 2  date Wed 01 May 2013 07:46:12 PM CDT
+LIBS:rgb_comp-lib
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:rgb-pcb-cache
+EELAYER 25  0
+EELAYER END
+$Descr A4 11700 8267
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "2 may 2013"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Connection ~ 3000 3700
+Wire Wire Line
+	3000 3800 3000 3350
+Wire Wire Line
+	2550 4250 2650 4250
+Connection ~ 3050 4450
+Wire Wire Line
+	2850 4450 3150 4450
+Wire Wire Line
+	3250 4400 3150 4400
+Wire Wire Line
+	3150 4400 3150 4450
+Connection ~ 3250 3900
+Connection ~ 3250 3800
+Connection ~ 3250 3400
+Wire Wire Line
+	3250 3300 3250 3500
+Wire Wire Line
+	7150 3500 7200 3500
+Wire Wire Line
+	6800 3300 6800 3500
+Wire Wire Line
+	6800 3300 7200 3300
+Connection ~ 7000 3300
+Connection ~ 7000 3100
+Connection ~ 10000 5100
+Wire Wire Line
+	9900 5100 10000 5100
+Connection ~ 10000 4550
+Wire Wire Line
+	9900 4550 10000 4550
+Connection ~ 10000 4350
+Wire Wire Line
+	9900 4350 10000 4350
+Connection ~ 10000 3800
+Wire Wire Line
+	9900 3800 10000 3800
+Connection ~ 10000 3250
+Wire Wire Line
+	9900 3250 10000 3250
+Connection ~ 10000 3050
+Wire Wire Line
+	9900 3050 10000 3050
+Connection ~ 10000 2500
+Wire Wire Line
+	9900 2500 10000 2500
+Wire Wire Line
+	10000 2150 10000 5200
+Wire Wire Line
+	10000 5200 9900 5200
+Wire Wire Line
+	8400 4400 8600 4400
+Wire Wire Line
+	8600 4400 8600 4750
+Wire Wire Line
+	8600 4750 8900 4750
+Wire Wire Line
+	8900 4750 8900 5100
+Wire Wire Line
+	8900 5100 9100 5100
+Wire Wire Line
+	8400 4200 8800 4200
+Wire Wire Line
+	8800 4200 8800 4550
+Wire Wire Line
+	8800 4550 9100 4550
+Wire Wire Line
+	8400 4000 9000 4000
+Wire Wire Line
+	9000 4000 9000 4350
+Wire Wire Line
+	9000 4350 9100 4350
+Wire Wire Line
+	9100 3800 8400 3800
+Wire Wire Line
+	8500 2750 8500 3100
+Wire Wire Line
+	8500 2750 8800 2750
+Wire Wire Line
+	8800 2750 8800 2400
+Wire Wire Line
+	8800 2400 9100 2400
+Wire Wire Line
+	9100 2600 9000 2600
+Wire Wire Line
+	9000 2600 9000 2950
+Wire Wire Line
+	9000 2950 8700 2950
+Wire Wire Line
+	8700 2950 8700 3300
+Wire Wire Line
+	9100 3150 8900 3150
+Wire Wire Line
+	8900 3150 8900 3500
+Wire Wire Line
+	8900 3500 8400 3500
+Wire Wire Line
+	8700 3300 8400 3300
+Wire Wire Line
+	8500 3100 8400 3100
+Wire Wire Line
+	8400 3200 8600 3200
+Wire Wire Line
+	8400 3400 8800 3400
+Wire Wire Line
+	8800 3400 8800 3050
+Wire Wire Line
+	8400 3600 9000 3600
+Wire Wire Line
+	9000 3600 9000 3250
+Wire Wire Line
+	8800 3050 9100 3050
+Wire Wire Line
+	9000 3250 9100 3250
+Wire Wire Line
+	8600 3200 8600 2850
+Wire Wire Line
+	8600 2850 8900 2850
+Wire Wire Line
+	8900 2850 8900 2500
+Wire Wire Line
+	8900 2500 9100 2500
+Wire Wire Line
+	9100 3700 8400 3700
+Wire Wire Line
+	9100 3900 8400 3900
+Wire Wire Line
+	8400 4100 8900 4100
+Wire Wire Line
+	8900 4100 8900 4450
+Wire Wire Line
+	8900 4450 9100 4450
+Wire Wire Line
+	8400 4300 8700 4300
+Wire Wire Line
+	8700 4300 8700 4650
+Wire Wire Line
+	8700 4650 9000 4650
+Wire Wire Line
+	9000 4650 9000 5000
+Wire Wire Line
+	9000 5000 9100 5000
+Wire Wire Line
+	8400 4500 8500 4500
+Wire Wire Line
+	8500 4500 8500 4850
+Wire Wire Line
+	8500 4850 8800 4850
+Wire Wire Line
+	8800 4850 8800 5200
+Wire Wire Line
+	8800 5200 9100 5200
+Wire Wire Line
+	9900 2400 10000 2400
+Connection ~ 10000 2400
+Wire Wire Line
+	9900 2600 10000 2600
+Connection ~ 10000 2600
+Wire Wire Line
+	9900 3150 10000 3150
+Connection ~ 10000 3150
+Wire Wire Line
+	9900 3700 10000 3700
+Connection ~ 10000 3700
+Wire Wire Line
+	9900 3900 10000 3900
+Connection ~ 10000 3900
+Wire Wire Line
+	9900 4450 10000 4450
+Connection ~ 10000 4450
+Wire Wire Line
+	9900 5000 10000 5000
+Connection ~ 10000 5000
+Wire Wire Line
+	6800 3100 7200 3100
+Wire Wire Line
+	6750 3400 6800 3400
+Connection ~ 6800 3400
+Wire Wire Line
+	6800 3500 6850 3500
+Wire Wire Line
+	3000 3700 3250 3700
+Wire Wire Line
+	3250 3500 3000 3500
+Wire Wire Line
+	3250 3700 3250 4100
+Connection ~ 3250 4000
+Wire Wire Line
+	3250 4300 3150 4300
+Wire Wire Line
+	3150 4300 3150 4250
+Wire Wire Line
+	3150 4250 2850 4250
+Connection ~ 3050 4250
+Wire Wire Line
+	2550 4450 2650 4450
+Connection ~ 3000 3500
+$Comp
+L GND #PWR?
+U 1 1 5181B718
+P 2550 4450
+F 0 "#PWR?" H 2550 4450 30  0001 C CNN
+F 1 "GND" H 2550 4380 30  0001 C CNN
+	1    2550 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5181B714
+P 2550 4250
+F 0 "#PWR?" H 2550 4250 30  0001 C CNN
+F 1 "GND" H 2550 4180 30  0001 C CNN
+	1    2550 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L C C?
+U 1 1 5181B6ED
+P 2750 4250
+F 0 "C?" H 2700 4500 60  0000 C CNN
+F 1 "22uF" H 2750 4400 60  0000 C CNN
+	1    2750 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5181B6E4
+P 2750 4450
+F 0 "C?" H 2700 4200 60  0000 C CNN
+F 1 "22uF" H 2750 4300 60  0000 C CNN
+	1    2750 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRYSTAL Y?
+U 1 1 5181B6AC
+P 3050 4350
+F 0 "Y?" V 2800 4350 60  0000 C CNN
+F 1 "16MHz" V 2900 4350 60  0000 C CNN
+	1    3050 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5181B47A
+P 3000 3350
+F 0 "#PWR?" H 3000 3350 30  0001 C CNN
+F 1 "GND" H 3000 3280 30  0001 C CNN
+	1    3000 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 5181B46F
+P 3000 3800
+F 0 "#PWR?" H 3000 3900 30  0001 C CNN
+F 1 "VCC" H 3000 3900 30  0000 C CNN
+	1    3000 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L C C?
+U 1 1 5181B43B
+P 3000 3600
+F 0 "C?" V 3000 3800 60  0000 C CNN
+F 1 "C" V 3000 3450 60  0000 C CNN
+	1    3000 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5181B0A8
+P 7000 3500
+F 0 "R?" H 6950 3600 60  0000 C CNN
+F 1 "1.8k" H 7000 3400 60  0000 C CNN
+	1    7000 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5181ACCA
+P 7000 3200
+F 0 "C?" V 7000 3050 60  0000 C CNN
+F 1 "0.1uF" V 6850 3250 60  0000 C CNN
+	1    7000 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5181AC1B
+P 6750 3400
+F 0 "#PWR?" H 6750 3400 30  0001 C CNN
+F 1 "GND" H 6750 3330 30  0001 C CNN
+	1    6750 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 5181AC0E
+P 6800 3100
+F 0 "#PWR?" H 6800 3200 30  0001 C CNN
+F 1 "VCC" H 6800 3200 30  0000 C CNN
+	1    6800 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 5181ABAB
+P 10000 2150
+F 0 "#PWR?" H 10000 2250 30  0001 C CNN
+F 1 "VCC" H 10000 2250 30  0000 C CNN
+	1    10000 2150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8400 4600
+$Comp
+L TLC5940 IC?
+U 1 1 5181A9D1
+P 7800 3850
+F 0 "IC?" H 7500 4750 60  0000 C CNN
+F 1 "TLC5940" H 8100 2950 60  0000 C CNN
+	1    7800 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CREE-CLV6A-FKB LED?
+U 1 1 51809806
+P 9500 5100
+F 0 "LED?" H 9700 4890 60  0000 C CNN
+F 1 "CREE-CLV6A-FKB" H 9490 5360 60  0000 C CNN
+	1    9500 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L CREE-CLV6A-FKB LED?
+U 1 1 51809801
+P 9500 4450
+F 0 "LED?" H 9700 4240 60  0000 C CNN
+F 1 "CREE-CLV6A-FKB" H 9490 4710 60  0000 C CNN
+	1    9500 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CREE-CLV6A-FKB LED?
+U 1 1 518097FC
+P 9500 3800
+F 0 "LED?" H 9700 3590 60  0000 C CNN
+F 1 "CREE-CLV6A-FKB" H 9490 4060 60  0000 C CNN
+	1    9500 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L CREE-CLV6A-FKB LED?
+U 1 1 518097F6
+P 9500 3150
+F 0 "LED?" H 9700 2940 60  0000 C CNN
+F 1 "CREE-CLV6A-FKB" H 9490 3410 60  0000 C CNN
+	1    9500 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CREE-CLV6A-FKB LED?
+U 1 1 518097DB
+P 9500 2500
+F 0 "LED?" H 9700 2290 60  0000 C CNN
+F 1 "CREE-CLV6A-FKB" H 9490 2760 60  0000 C CNN
+	1    9500 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L ATMEGA328P IC?
+U 1 1 5180962A
+P 4250 4100
+F 0 "IC?" H 3400 5250 60  0000 C CNN
+F 1 "ATMEGA328P" H 4900 2950 60  0000 C CNN
+	1    4250 4100
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
