@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 02 May 2013 01:02:39 AM CDT
+EESchema Schematic File Version 2  date Sat 04 May 2013 12:02:47 PM CDT
 LIBS:rgb_comp-lib
 LIBS:power
 LIBS:device
