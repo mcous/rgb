@@ -1,6 +1,6 @@
-update=Tue 07 May 2013 08:11:44 PM CDT
+update=Tue 07 May 2013 09:16:12 PM CDT
 version=1
-last_client=pcbnew
+last_client=kicad
 [eeschema]
 version=1
 LibDir=/home/mike/Projects/kicad-lib/components
@@ -39,8 +39,6 @@ LibName3=ti-ic
 LibName4=connector
 LibName5=power
 LibName6=maxim-ic
-[general]
-version=1
 [cvpcb]
 version=1
 NetIExt=net
@@ -48,10 +46,10 @@ NetIExt=net
 version=1
 LastNetListRead=
 UseCmpFile=1
-PadDrill="    0.000000"
-PadDrillOvalY="    0.000000"
-PadSizeH="    2.650000"
-PadSizeV="    2.350000"
+PadDrill="    1.016000"
+PadDrillOvalY="    1.016000"
+PadSizeH="    1.778000"
+PadSizeV="    1.778000"
 PcbTextSizeV="    2.032000"
 PcbTextSizeH="    1.524000"
 PcbTextThickness="    0.304800"
@@ -70,3 +68,7 @@ LibName2=so
 LibName3=sm_led
 LibName4=connect_thru
 LibName5=sm_cap
+LibName6=sm_gen
+LibName7=to
+[general]
+version=1

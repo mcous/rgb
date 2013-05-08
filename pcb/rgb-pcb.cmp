@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-mar-30)-stable date = Tue 07 May 2013 08:34:57 PM CDT
+Cmp-Mod V01 Created by CvPcb (2013-mar-30)-stable date = Tue 07 May 2013 09:16:00 PM CDT
 
 BeginCmp
 TimeStamp = /5181B6ED;
@@ -81,21 +81,21 @@ BeginCmp
 TimeStamp = /5189A717;
 Reference = C12;
 ValeurCmp = 10uF;
-IdModule  = 2413(6032m)_cap;
+IdModule  = 1206(3216m);
 EndCmp
 
 BeginCmp
 TimeStamp = /51859FDD;
 Reference = F1;
 ValeurCmp = 500mA;
-IdModule  = ;
+IdModule  = 1206(3216m);
 EndCmp
 
 BeginCmp
 TimeStamp = /5181F966;
 Reference = IC1;
 ValeurCmp = 5V_REG;
-IdModule  = ;
+IdModule  = TO220_3pin;
 EndCmp
 
 BeginCmp
