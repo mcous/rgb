@@ -1,80 +1,80 @@
-Cmp-Mod V01 Created by CvPcb (2013-mar-30)-stable date = Tue 07 May 2013 09:16:00 PM CDT
+Cmp-Mod V01 Created by CvPcb (2013-mar-30)-stable date = Wed 08 May 2013 06:53:41 PM CDT
 
 BeginCmp
 TimeStamp = /5181B6ED;
 Reference = C1;
 ValeurCmp = 22pF;
-IdModule  = 0603(1608m)_cap;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
 TimeStamp = /5181B6E4;
 Reference = C2;
 ValeurCmp = 22pF;
-IdModule  = 0603(1608m)_cap;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
 TimeStamp = /518597A3;
 Reference = C3;
 ValeurCmp = 0.33uF;
-IdModule  = 0603(1608m)_cap;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
 TimeStamp = /518597B3;
 Reference = C4;
 ValeurCmp = 0.1uF;
-IdModule  = 0603(1608m)_cap;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
 TimeStamp = /5181B43B;
 Reference = C5;
 ValeurCmp = 0.1uF;
-IdModule  = 0603(1608m)_cap;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
 TimeStamp = /5181ACCA;
 Reference = C6;
 ValeurCmp = 0.1uF;
-IdModule  = 0603(1608m)_cap;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
 TimeStamp = /518585DE;
 Reference = C7;
 ValeurCmp = 0.1uF;
-IdModule  = 0603(1608m)_cap;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
 TimeStamp = /51858602;
 Reference = C8;
 ValeurCmp = 0.1uF;
-IdModule  = 0603(1608m)_cap;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
 TimeStamp = /51858658;
 Reference = C9;
 ValeurCmp = 0.47uF;
-IdModule  = 0603(1608m)_cap;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
 TimeStamp = /518586C4;
 Reference = C10;
 ValeurCmp = 0.47uF;
-IdModule  = 0603(1608m)_cap;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
 TimeStamp = /518586D0;
 Reference = C11;
 ValeurCmp = 0.47uF;
-IdModule  = 0603(1608m)_cap;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
@@ -137,7 +137,7 @@ BeginCmp
 TimeStamp = /518598BC;
 Reference = LED1;
 ValeurCmp = PWR-GRN;
-IdModule  = ;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
@@ -179,70 +179,70 @@ BeginCmp
 TimeStamp = /5181EFCB;
 Reference = P1;
 ValeurCmp = AVR_ISP;
-IdModule  = ;
+IdModule  = 2x3-array;
 EndCmp
 
 BeginCmp
 TimeStamp = /51859BE4;
 Reference = P2;
 ValeurCmp = DEBUG;
-IdModule  = ;
+IdModule  = SIP12;
 EndCmp
 
 BeginCmp
 TimeStamp = /5181EF74;
 Reference = R1;
 ValeurCmp = 10k;
-IdModule  = ;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
 TimeStamp = /518598B4;
 Reference = R2;
 ValeurCmp = 330;
-IdModule  = ;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
 TimeStamp = /51859382;
 Reference = R3;
 ValeurCmp = 10k_arr;
-IdModule  = ;
+IdModule  = SIP9;
 EndCmp
 
 BeginCmp
 TimeStamp = /5181F734;
 Reference = R4;
 ValeurCmp = 10k;
-IdModule  = ;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
 TimeStamp = /5181B0A8;
 Reference = R5;
 ValeurCmp = 1.8k;
-IdModule  = ;
+IdModule  = 0603(1608m);
 EndCmp
 
 BeginCmp
 TimeStamp = /5181EF67;
 Reference = S1;
 ValeurCmp = RESET;
-IdModule  = ;
+IdModule  = SPST_4-pin-thru;
 EndCmp
 
 BeginCmp
 TimeStamp = /51858F84;
 Reference = S2;
 ValeurCmp = ADDRESS;
-IdModule  = ;
+IdModule  = DIP16;
 EndCmp
 
 BeginCmp
 TimeStamp = /5181B6AC;
 Reference = Y1;
 ValeurCmp = 16MHz;
-IdModule  = ;
+IdModule  = HC49;
 EndCmp
 
 EndListe

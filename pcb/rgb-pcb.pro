@@ -1,6 +1,6 @@
-update=Tue 07 May 2013 09:16:12 PM CDT
+update=Wed 08 May 2013 06:44:28 PM CDT
 version=1
-last_client=kicad
+last_client=cvpcb
 [eeschema]
 version=1
 LibDir=/home/mike/Projects/kicad-lib/components
@@ -39,17 +39,16 @@ LibName3=ti-ic
 LibName4=connector
 LibName5=power
 LibName6=maxim-ic
-[cvpcb]
+[general]
 version=1
-NetIExt=net
 [pcbnew]
 version=1
 LastNetListRead=
 UseCmpFile=1
-PadDrill="    1.016000"
-PadDrillOvalY="    1.016000"
-PadSizeH="    1.778000"
-PadSizeV="    1.778000"
+PadDrill="    1.000000"
+PadDrillOvalY="    1.000000"
+PadSizeH="    1.800000"
+PadSizeV="    1.800000"
 PcbTextSizeV="    2.032000"
 PcbTextSizeH="    1.524000"
 PcbTextThickness="    0.304800"
@@ -62,7 +61,6 @@ DrawSegmentWidth="    0.381000"
 BoardOutlineThickness="    0.381000"
 ModuleOutlineThickness="    0.381000"
 [pcbnew/libraries]
-LibDir=/home/mike/Projects/kicad-lib/footprints
 LibName1=qfp
 LibName2=so
 LibName3=sm_led
@@ -70,5 +68,11 @@ LibName4=connect_thru
 LibName5=sm_cap
 LibName6=sm_gen
 LibName7=to
-[general]
+LibName8=dip
+LibName9=sip
+LibName10=xtal
+LibName11=switch
+LibDir=/home/mike/Projects/kicad-lib/footprints
+[cvpcb]
 version=1
+NetIExt=net
