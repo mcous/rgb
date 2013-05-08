@@ -1,87 +1,87 @@
-Cmp-Mod V01 Created by CvPcb (2012-jan-04)-stable date = Mon 06 May 2013 09:35:54 AM CDT
+Cmp-Mod V01 Created by CvPcb (2013-mar-30)-stable date = Tue 07 May 2013 08:34:57 PM CDT
 
 BeginCmp
 TimeStamp = /5181B6ED;
 Reference = C1;
 ValeurCmp = 22pF;
-IdModule  = ;
+IdModule  = 0603(1608m)_cap;
 EndCmp
 
 BeginCmp
 TimeStamp = /5181B6E4;
 Reference = C2;
 ValeurCmp = 22pF;
-IdModule  = ;
+IdModule  = 0603(1608m)_cap;
 EndCmp
 
 BeginCmp
 TimeStamp = /518597A3;
 Reference = C3;
 ValeurCmp = 0.33uF;
-IdModule  = ;
+IdModule  = 0603(1608m)_cap;
 EndCmp
 
 BeginCmp
 TimeStamp = /518597B3;
 Reference = C4;
 ValeurCmp = 0.1uF;
-IdModule  = ;
+IdModule  = 0603(1608m)_cap;
 EndCmp
 
 BeginCmp
 TimeStamp = /5181B43B;
 Reference = C5;
 ValeurCmp = 0.1uF;
-IdModule  = ;
+IdModule  = 0603(1608m)_cap;
 EndCmp
 
 BeginCmp
 TimeStamp = /5181ACCA;
 Reference = C6;
 ValeurCmp = 0.1uF;
-IdModule  = ;
+IdModule  = 0603(1608m)_cap;
 EndCmp
 
 BeginCmp
 TimeStamp = /518585DE;
 Reference = C7;
 ValeurCmp = 0.1uF;
-IdModule  = ;
+IdModule  = 0603(1608m)_cap;
 EndCmp
 
 BeginCmp
 TimeStamp = /51858602;
 Reference = C8;
 ValeurCmp = 0.1uF;
-IdModule  = ;
+IdModule  = 0603(1608m)_cap;
 EndCmp
 
 BeginCmp
 TimeStamp = /51858658;
 Reference = C9;
 ValeurCmp = 0.47uF;
-IdModule  = ;
+IdModule  = 0603(1608m)_cap;
 EndCmp
 
 BeginCmp
 TimeStamp = /518586C4;
 Reference = C10;
 ValeurCmp = 0.47uF;
-IdModule  = ;
+IdModule  = 0603(1608m)_cap;
 EndCmp
 
 BeginCmp
 TimeStamp = /518586D0;
 Reference = C11;
 ValeurCmp = 0.47uF;
-IdModule  = ;
+IdModule  = 0603(1608m)_cap;
 EndCmp
 
 BeginCmp
-TimeStamp = /5185A18C;
+TimeStamp = /5189A717;
 Reference = C12;
 ValeurCmp = 10uF;
-IdModule  = ;
+IdModule  = 2413(6032m)_cap;
 EndCmp
 
 BeginCmp
@@ -106,9 +106,9 @@ IdModule  = TQFP32_7mm;
 EndCmp
 
 BeginCmp
-TimeStamp = /5181A9D1;
+TimeStamp = /5186F144;
 Reference = IC3;
-ValeurCmp = TLC5940;
+ValeurCmp = TLC5940_SOP;
 IdModule  = HTSSOP28;
 EndCmp
 
@@ -123,14 +123,14 @@ BeginCmp
 TimeStamp = /51857E4A;
 Reference = J1;
 ValeurCmp = SERIAL-POWER_out;
-IdModule  = ;
+IdModule  = 8P8C_thru;
 EndCmp
 
 BeginCmp
 TimeStamp = /51858012;
 Reference = J2;
 ValeurCmp = SERIAL-POWER_in;
-IdModule  = ;
+IdModule  = 8P8C_thru;
 EndCmp
 
 BeginCmp

@@ -1,6 +1,6 @@
-update=Mon 06 May 2013 09:35:50 AM CDT
+update=Tue 07 May 2013 08:11:44 PM CDT
 version=1
-last_client=kicad
+last_client=pcbnew
 [eeschema]
 version=1
 LibDir=/home/mike/Projects/kicad-lib/components
@@ -39,31 +39,34 @@ LibName3=ti-ic
 LibName4=connector
 LibName5=power
 LibName6=maxim-ic
+[general]
+version=1
 [cvpcb]
 version=1
 NetIExt=net
 [pcbnew]
 version=1
-PadDrlX=1260
-PadDimH=1260
-PadDimV=1260
-BoardThickness=630
-TxtPcbV=800
-TxtPcbH=600
-TxtModV=600
-TxtModH=600
-TxtModW=120
-VEgarde=100
-DrawLar=150
-EdgeLar=150
-TxtLar=120
-MSegLar=150
 LastNetListRead=
+UseCmpFile=1
+PadDrill="    0.000000"
+PadDrillOvalY="    0.000000"
+PadSizeH="    2.650000"
+PadSizeV="    2.350000"
+PcbTextSizeV="    2.032000"
+PcbTextSizeH="    1.524000"
+PcbTextThickness="    0.304800"
+ModuleTextSizeV="    1.524000"
+ModuleTextSizeH="    1.524000"
+ModuleTextSizeThickness="    0.304800"
+SolderMaskClearance="    0.254000"
+SolderMaskMinWidth="    0.000000"
+DrawSegmentWidth="    0.381000"
+BoardOutlineThickness="    0.381000"
+ModuleOutlineThickness="    0.381000"
 [pcbnew/libraries]
 LibDir=/home/mike/Projects/kicad-lib/footprints
 LibName1=qfp
 LibName2=so
 LibName3=sm_led
 LibName4=connect_thru
-[general]
-version=1
+LibName5=sm_cap

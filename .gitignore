@@ -1,3 +1,8 @@
+# Filesystem crap
+.DS_Store
+~*
+$*
+
 # KiCAD Temp Files
 *.000
 *.bck
