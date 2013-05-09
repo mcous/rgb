@@ -1,6 +1,6 @@
-update=Wed 08 May 2013 06:44:28 PM CDT
+update=Wed 08 May 2013 08:45:34 PM CDT
 version=1
-last_client=cvpcb
+last_client=kicad
 [eeschema]
 version=1
 LibDir=/home/mike/Projects/kicad-lib/components
@@ -39,8 +39,6 @@ LibName3=ti-ic
 LibName4=connector
 LibName5=power
 LibName6=maxim-ic
-[general]
-version=1
 [pcbnew]
 version=1
 LastNetListRead=
@@ -76,3 +74,5 @@ LibDir=/home/mike/Projects/kicad-lib/footprints
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
