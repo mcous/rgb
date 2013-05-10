@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 09 May 2013 07:27:18 PM CDT
+EESchema Schematic File Version 2  date Thu 09 May 2013 07:28:38 PM CDT
 LIBS:standard
 LIBS:avr-mcu
 LIBS:ti-ic
