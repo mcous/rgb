@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 2 date Fri 10 May 2013 05:23:14 PM CDT
+PCBNEW-BOARD Version 2 date Fri 10 May 2013 05:32:57 PM CDT
 
 # Created by Pcbnew(2013-mar-30)-stable
 
@@ -62,7 +62,7 @@ Pad2MaskClearance 0.127
 SolderMaskMinWidth 0
 AuxiliaryAxisOrg 92.075 115.57
 VisibleElements FFFFBFBF
-PcbPlotParams (pcbplotparams (layerselection 3178497) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 2) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory ""))
+PcbPlotParams (pcbplotparams (layerselection 284196865) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin true) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 2) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory /home/mike/Projects/rgb/pcb/gerber-plots/))
 $EndSETUP
 
 $EQUIPOT
