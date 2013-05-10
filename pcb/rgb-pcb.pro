@@ -1,6 +1,6 @@
-update=Fri 10 May 2013 04:00:20 PM CDT
+update=Fri 10 May 2013 05:09:41 PM CDT
 version=1
-last_client=kicad
+last_client=pcbnew
 [eeschema]
 version=1
 LibDir=/home/mike/Projects/kicad-lib/components
@@ -39,26 +39,32 @@ LibName3=ti-ic
 LibName4=connector
 LibName5=power
 LibName6=maxim-ic
+[cvpcb]
+version=1
+NetIExt=net
+[general]
+version=1
 [pcbnew]
 version=1
 LastNetListRead=
 UseCmpFile=1
-PadDrill="    1.000000"
-PadDrillOvalY="    1.000000"
-PadSizeH="    1.800000"
-PadSizeV="    1.800000"
+PadDrill="    3.000000"
+PadDrillOvalY="    3.000000"
+PadSizeH="    3.000000"
+PadSizeV="    3.000000"
 PcbTextSizeV="    2.032000"
 PcbTextSizeH="    1.524000"
 PcbTextThickness="    0.304800"
 ModuleTextSizeV="    1.524000"
 ModuleTextSizeH="    1.524000"
 ModuleTextSizeThickness="    0.304800"
-SolderMaskClearance="    0.254000"
+SolderMaskClearance="    0.127000"
 SolderMaskMinWidth="    0.000000"
 DrawSegmentWidth="    0.381000"
 BoardOutlineThickness="    0.381000"
-ModuleOutlineThickness="    0.381000"
+ModuleOutlineThickness="    0.254000"
 [pcbnew/libraries]
+LibDir=/home/mike/Projects/kicad-lib/footprints
 LibName1=qfp
 LibName2=so
 LibName3=sm_led
@@ -70,9 +76,6 @@ LibName8=dip
 LibName9=sip
 LibName10=xtal
 LibName11=switch
-LibDir=/home/mike/Projects/kicad-lib/footprints
-[cvpcb]
-version=1
-NetIExt=net
-[general]
-version=1
+LibName12=mount
+LibName13=logo
+LibName14=/home/mike/Downloads/oshw-logo-kicad-copper-10mm
