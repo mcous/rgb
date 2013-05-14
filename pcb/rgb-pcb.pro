@@ -1,4 +1,4 @@
-update=Tue 14 May 2013 03:10:48 PM CDT
+update=Tue 14 May 2013 03:12:29 PM CDT
 version=1
 last_client=kicad
 [eeschema]
@@ -76,6 +76,5 @@ LibName10=xtal
 LibName11=switch
 LibName12=mount
 LibName13=logo
-LibName14=/home/mike/Downloads/oshw-logo-kicad-copper-10mm
 [general]
 version=1
