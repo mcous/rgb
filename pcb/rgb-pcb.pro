@@ -1,6 +1,6 @@
-update=Fri 10 May 2013 05:09:41 PM CDT
+update=Tue 14 May 2013 03:10:48 PM CDT
 version=1
-last_client=pcbnew
+last_client=kicad
 [eeschema]
 version=1
 LibDir=/home/mike/Projects/kicad-lib/components
@@ -42,8 +42,6 @@ LibName6=maxim-ic
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [pcbnew]
 version=1
 LastNetListRead=
@@ -79,3 +77,5 @@ LibName11=switch
 LibName12=mount
 LibName13=logo
 LibName14=/home/mike/Downloads/oshw-logo-kicad-copper-10mm
+[general]
+version=1
