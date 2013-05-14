@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 2 date Tue 14 May 2013 03:42:16 PM CDT
+PCBNEW-BOARD Version 2 date Tue 14 May 2013 06:14:58 PM CDT
 
 # Created by Pcbnew(2013-mar-30)-stable
 
@@ -7,7 +7,7 @@ encoding utf-8
 Units mm
 LayerCount 2
 EnabledLayers 1FFF8001
-VisibleLayers 1BFF8001
+VisibleLayers 1BFF8000
 Links 174
 NoConn 1
 Di 74.512714 72.694803 222.377 126.441203
@@ -62,7 +62,7 @@ Pad2MaskClearance 0.127
 SolderMaskMinWidth 0
 AuxiliaryAxisOrg 92.075 115.57
 VisibleElements FFFFBFBF
-PcbPlotParams (pcbplotparams (layerselection 284196865) (usegerberextensions false) (excludeedgelayer true) (linewidth 15240) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 2) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 2) (mirror false) (drillshape 2) (scaleselection 1) (outputdirectory /home/mike/Projects/rgb/pcb/eps-plots/))
+PcbPlotParams (pcbplotparams (layerselection 284196865) (usegerberextensions true) (excludeedgelayer true) (linewidth 15240) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin true) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 2) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk true) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory /home/mike/Projects/rgb/pcb/gerber-plots/))
 $EndSETUP
 
 $EQUIPOT

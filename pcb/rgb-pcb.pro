@@ -1,6 +1,6 @@
-update=Tue 14 May 2013 03:59:01 PM CDT
+update=Tue 14 May 2013 06:15:11 PM CDT
 version=1
-last_client=pcbnew
+last_client=kicad
 [eeschema]
 version=1
 LibDir=/home/mike/Projects/kicad-lib/components
@@ -42,8 +42,6 @@ LibName6=maxim-ic
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [pcbnew]
 version=1
 LastNetListRead=
@@ -78,3 +76,5 @@ LibName10=xtal
 LibName11=switch
 LibName12=mount
 LibName13=logo
+[general]
+version=1
