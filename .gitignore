@@ -8,3 +8,6 @@ $*
 *.bck
 *bak
 *.net
+
+# Gerber stuff
+*.zip
