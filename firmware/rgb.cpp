@@ -11,7 +11,7 @@
 // defines
 
 
-int main(void) {
+int main (void) {
 
     // OH MY GOD IT'S ENDLESS
     for(;;) {
