@@ -2,6 +2,14 @@
 #
 # written by michael cousins
 # http://github.com/mcous/rgb
+#
+# targets:
+#   all:    compiles the source code
+#   test:   tests the isp connection to the mcu
+#   flash:  writes compiled hex file to the mcu's flash memory
+#   fuse:   writes the fuse bytes to the MCU
+#   disasm: disassembles the code for debugging
+#   clean:  removes all .hex, .elf, and .o files in the source code directory
 
 # parameters (change this stuff accordingly)
 # project name
@@ -13,9 +21,9 @@ CLK = 16000000
 # avrdude programmer and port (if necessary)
 PRG = tinyusb
 # fuse values for avr: low, high, and extended
-LFU =
-HFU = 
-EFU = 
+LFU = 0xFF
+HFU = 0xDE
+EFU = 0x05
 # program source files (c and/or c++)
 SRC = $(PRJ).cpp TLC5940.cpp
 
