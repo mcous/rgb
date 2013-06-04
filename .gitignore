@@ -1,14 +1,19 @@
-# Filesystem crap
+# filesystem crap
 .DS_Store
 ~*
 $*
 _*
 
-# KiCAD Temp Files
+# kicad temp files
 *.000
 *.bck
 *bak
 *.net
 
-# Gerber stuff
+# packaged stuff
 *.zip
+
+# compiled objects
+*.hex
+*.o
+*.elf
