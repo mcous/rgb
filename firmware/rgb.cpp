@@ -12,10 +12,16 @@
 
 
 int main (void) {
+    // set some initial values for the leds
+    for (uint8_t i=0; i<15; i++) {
+        driver.setGS(i, 2023);
+    }
+    // initialize dot correction on the led driver
+    driver.initDC();
 
     // OH MY GOD IT'S ENDLESS
     for(;;) {
-
+        driver.refreshGS();
     }
 
     // the answer

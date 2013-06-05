@@ -55,7 +55,7 @@ test:
 
 # flash program to mcu
 flash: all
-	$(AVRDUDE) -U flash:w:band.hex:i
+	$(AVRDUDE) -U flash:w:$(PRJ).hex:i
 
 # write fuses to mcu
 fuse:
