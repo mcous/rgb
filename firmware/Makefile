@@ -19,7 +19,7 @@ MCU = atmega328p
 # mcu clock frequency
 CLK = 16000000
 # avrdude programmer and port (if necessary)
-PRG = tinyusb
+PRG = usbtiny
 # fuse values for avr: low, high, and extended
 LFU = 0xFF
 HFU = 0xDE
