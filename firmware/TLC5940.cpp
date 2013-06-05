@@ -33,6 +33,7 @@ TLC5940::TLC5940(void) {
     dataCount = 0;
 }
 
+// fill the dot correction register with 0s
 void TLC5940::initDC(void) {
     // set dcprg to 1 (don't use eeprom data)
     PORT_DCPRG |= (1 << DCPRG_PIN);
@@ -50,7 +51,8 @@ void TLC5940::initDC(void) {
     PORT_XLAT &= ~(1 << XLAT_PIN);
 }
 
-void TLC5940::refreshDC(void) {
+// refresh the led display and data
+void TLC5940::refreshGS(void) {
     // if vprg is high
     if (PORT_VPRG & (1 << VPRG_PIN)) {
         // set it low
@@ -98,4 +100,19 @@ void TLC5940::refreshDC(void) {
         PORT_SCLK &= ~(1 << SCLK_PIN);
     }
     gsFirstCycle = false;
+}
+
+// set the brightness of an individual led
+void TLC5940::setGS(uint8_t led, uint16_t val) {
+    // basic parameter checking
+    // check if led is inbounds
+    if (led < 16) {
+        // if value is out of bounds, set to max
+        if (val < 4096) {
+            gs[led] = val;
+        }
+        else {
+            gs[led] = 4095;
+        }
+    }
 }
