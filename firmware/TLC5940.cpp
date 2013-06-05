@@ -23,6 +23,9 @@ TLC5940::TLC5940(void) {
     // blank
     DDR_BLANK |= (1 << BLANK_PIN);
     PORT_BLANK |= (1 << BLANK_PIN);
+    // serial data master out slave in
+    DDR_MOSI |= (1 << MOSI_PIN);
+    PORT_MOSI &= ~(1 << MOSI_PIN);
 }
 
 void TLC5940::initDC(void) {

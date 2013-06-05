@@ -39,9 +39,14 @@ public:
     // constructor (don't need a destructor)
     TLC5940();
     // initialize dot correction to 0
-    initDC();
+    void initDC(void);
+    // set the brightness of an led
+    void setGS(uint8_t led, uint16_t val);
+    // gs refresh function (goes in main loop)
+    void refreshGS(void);
 
 private:
-
+    // gs array
+    uint16_t gs[16];
 
 };
