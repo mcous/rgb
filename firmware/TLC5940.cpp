@@ -26,6 +26,11 @@ TLC5940::TLC5940(void) {
     // serial data master out slave in
     DDR_MOSI |= (1 << MOSI_PIN);
     PORT_MOSI &= ~(1 << MOSI_PIN);
+
+    // initialize variables for safety
+    gsFirstCycle = false;
+    gsCount = 0;
+    dataCount = 0;
 }
 
 void TLC5940::initDC(void) {
@@ -43,4 +48,54 @@ void TLC5940::initDC(void) {
     // pulse xlat to latch the data
     PORT_XLAT |= (1 << XLAT_PIN);
     PORT_XLAT &= ~(1 << XLAT_PIN);
+}
+
+void TLC5940::refreshDC(void) {
+    // if vprg is high
+    if (PORT_VPRG & (1 << VPRG_PIN)) {
+        // set it low
+        PORT_VPRG &= ~(1 << VPRG_PIN)
+        // set the first cycle flag (just came out of a dc cycle)
+        gsFirstCycle = true;
+    }
+    // reset gs and data counters
+    gsCount = 0;
+    dataCount = 0;
+    // enable leds
+    PORT_BLANK &= ~(1 << BLANK_PIN);
+    // loop through a gs cycle and post-increment gs counter
+    while (gsCount++ < 4095) {
+        // if there's data to clock in
+        if (dataCount < 191) {
+            // get the bit the tlc5940 is expecting from the gs array (tlc expects msb first)
+            uint8_t data = (gs[(191 - dataCount)/12]) & (1 << (191 - dataCount)%12);
+            // set mosi if bit is high, clear if bit is low
+            if (data) {
+                PORT_MOSI |= (1 << MOSI_PIN);
+            }
+            else {
+                PORT_MOSI &= ~(1 << MOSI_PIN);
+            }
+            // pulse the serial clock
+            PORT_SCLK |= (1 << SCLK_PIN);
+            PORT_SCLK &= ~(1 << SCLK_PIN);
+            // increment data counter
+            dataCount++;
+        }
+        // pulse the gs clock
+        PORT_GSCLK |= (1 << GSCLK_PIN);
+        PORT_GSCLK &= ~(1 << GSCLK_PIN);
+    }
+    // disable leds before latching in new data
+    PORT_BLANK |= (1 << BLANK_PIN);
+    // pulse xlat to save new gs data
+    PORT_XLAT |= (1 << XLAT_PIN);
+    PORT_XLAT &= ~(1 << XLAT_PIN);
+    // check if this was the first gs cycle after a dc cycle
+    if (gsFirstCycle) {
+        // pulse serial clock once if it is (because the datasheet tells us to)
+        PORT_SCLK |= (1 << SCLK_PIN);
+        PORT_SCLK &= ~(1 << SCLK_PIN);
+    }
+    gsFirstCycle = false;
 }

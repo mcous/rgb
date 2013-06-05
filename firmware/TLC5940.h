@@ -48,5 +48,11 @@ public:
 private:
     // gs array
     uint16_t gs[16];
+    // gs first cycle flag
+    bool gsFirstCycle;
+    // gs cycle counter
+    uint16_t gsCount;
+    // data input counter
+    uint8_t dataCount;
 
 };
