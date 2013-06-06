@@ -46,12 +46,10 @@ int main (void) {
     */
 
     // cylon variables
-    /*
     uint16_t count = 0;
     uint8_t last = 0;
     uint8_t curr = 0;
     int8_t dir = 1;
-    */
 
     // waterfall thingy variables
     /*
@@ -61,6 +59,7 @@ int main (void) {
     */
 
     // TRIPLE RAINBOW VARIABLES
+    /*
     double rA[] = {0, 0, 0, 0, 0};
     double gA[] = {0, 0, 0, 0, 0};
     double bA[] = {0, 0, 0, 0, 0};
@@ -68,22 +67,20 @@ int main (void) {
     uint16_t mag = 1000;
     float shift = 2;
     uint8_t sDir = 1;
+    */
 
     // OH MY GOD IT'S ENDLESS
     for(;;) {
-        
+
         // TRIPLE RAINBOW
-        if (count > 0) {
+        /*
+        if (count > 5) {
             count = 0;
-            rA[0] += 0.02;
             if (sDir) {
-                shift += 0.01;
+                shift += 0.02;
             }
             else {
                 shift -= 0.02;
-            }
-            if (rA[0] > 6.28) {
-                rA[0] = 0;
             }
             if (shift >= 3.0) {
                 sDir = 0;
@@ -91,38 +88,49 @@ int main (void) {
             else if (shift <= 1.0) {
                 sDir = 1;
             }
-
-            driver.setGS(0, (uint16_t)(mag*(1+sin(rA[0]))));
-            gA[0] = rA[0] + shift;
-            if (gA[0] > 6.28) {
-                gA[0] -= 6.28;
-            }
-            driver.setGS(1, (uint16_t)(mag*(1+sin(gA[0]))));
-            bA[0] = rA[0] + (2.0 * shift);
-            if (bA[0] > 6.28) {
-                bA[0] -= 6.28;
-            }
-            driver.setGS(2, (uint16_t)(mag*(1+sin(bA[0]))));
-            for (uint8_t i=1; i<5; i++) {
-                rA[i] = rA[i-1] + 1.26;
-                if (rA[i] > 6.28) {
-                    rA[i] -= 6.28;
-                }
-                driver.setGS(3*i, (uint16_t)(mag*(1+sin(rA[i]))));
-                gA[i] = gA[i-1] + 1.26;
-                if (gA[i] > 6.28) {
-                    gA[i] -= 6.28;
-                }
-                driver.setGS(3*i+1, (uint16_t)(mag*(1+sin(gA[i]))));
-                bA[i] = bA[i-1] + 1.26;
-                if (bA[i] > 6.28) {
-                    bA[i] -= 6.28;
-                }
-                driver.setGS(3*i+2, (uint16_t)(mag*(1+sin(bA[i]))));
-            }
         }
+            
+        rA[0] += 0.02;
+        if (rA[0] > 6.28) {
+            rA[0] = 0;
+        }
+        driver.setGS(0, (uint16_t)(mag*(1+sin(rA[0]))));
+
+        gA[0] = rA[0] + shift;
+        if (gA[0] > 6.28) {
+            gA[0] -= 6.28;
+        }
+        driver.setGS(1, (uint16_t)(mag*(1+sin(gA[0]))));
+
+        bA[0] = rA[0] + (2.0 * shift);
+        if (bA[0] > 6.28) {
+            bA[0] -= 6.28;
+        }
+        driver.setGS(2, (uint16_t)(mag*(1+sin(bA[0]))));
+
+        for (uint8_t i=1; i<5; i++) {
+            rA[i] = rA[i-1] + 1.26;
+            if (rA[i] > 6.28) {
+                rA[i] -= 6.28;
+            }
+            driver.setGS(3*i, (uint16_t)(mag*(1+sin(rA[i]))));
+
+            gA[i] = gA[i-1] + 1.26;
+            if (gA[i] > 6.28) {
+                gA[i] -= 6.28;
+            }
+            driver.setGS(3*i+1, (uint16_t)(mag*(1+sin(gA[i]))));
+
+            bA[i] = bA[i-1] + 1.26;
+            if (bA[i] > 6.28) {
+                bA[i] -= 6.28;
+            }
+            driver.setGS(3*i+2, (uint16_t)(mag*(1+sin(bA[i]))));
+        }
+
         driver.refreshGS();
         count++;
+        */
 
         // waterfall thingy
         /*
@@ -140,8 +148,7 @@ int main (void) {
         */
 
         // cylon stuff
-        /*
-        if (count > 9) {
+        if (count > 10) {
             count = 0;
             last = curr;
             if (last <=2) {
@@ -156,7 +163,6 @@ int main (void) {
         driver.setGS(curr, 500);
         driver.refreshGS();
         count++;
-        */
 
         // two-color-combo stuff
         /*
