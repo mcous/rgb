@@ -7,9 +7,11 @@
 
 // includes
 #include "rgb.h"
+#include <math.h>
 
 // defines
-
+// taylor series sin expansion
+//#define sin_t(a) (a-(pow(a,3.0)/6.0)+(pow(a,5.0)/120.0)-(pow(a,7.0)/5040.0))
 
 int main (void) {
     // set dc values
@@ -17,10 +19,11 @@ int main (void) {
         driver.setDC(i, 10);
     }
     // set some initial values for the leds
-    //for (uint8_t i=0; i<15; i++) {
-    //    driver.setGS(i, 1000);
-    //}
+    for (uint8_t i=0; i<15; i++) {
+        driver.setGS(i, 0);
+    }
 
+/*
     driver.setGS(0,  1000);
     driver.setGS(1,  0   );
     driver.setGS(2,  0   );
@@ -36,19 +39,31 @@ int main (void) {
     driver.setGS(12, 1000);
     driver.setGS(13, 0   );
     driver.setGS(14, 0   );
+    // Unused LED
+    driver.setGS(15, 0   );
+*/
 
     // initialize dot correction on the led driver
     driver.init();
 
-    uint16_t red = 0;
-    uint16_t red = 0;
-    uint16_t red = 0;
+    double a = 0;
+    uint16_t red;
+    uint16_t grn;
+    uint16_t blu;
 
     // OH MY GOD IT'S ENDLESS
     for(;;) {
+        if (a >= 6.28) {
+            a = 0;
+        }
 
+        red = (uint16_t)(1000 * (1 + sin(a)));
+        grn = (uint16_t)(1000 * (1 + sin(a + (1*3.14/3.0))));
+        blu = (uint16_t)(1000 * (1 + sin(a + (2*3.14/3.0))));
+        
         rgb(red, grn, blu);
         driver.refreshGS();
+        a+=0.01;
     }
 
     // the answer

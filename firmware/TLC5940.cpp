@@ -83,7 +83,7 @@ void TLC5940::refreshGS(void) {
         // if there's data to clock in
         if (gsCount < 192) {
             // get the bit the tlc5940 is expecting from the gs array (tlc expects msb first)
-            uint8_t data = (gs[(191 - gsCount)/12]) & (1 << (191 - gsCount)%12);
+            uint16_t data = (gs[(191 - gsCount)/12]) & (1 << (191 - gsCount)%12);
             // set mosi if bit is high, clear if bit is low
             if (data) {
                 PORT_MOSI |= (1 << MOSI_PIN);
