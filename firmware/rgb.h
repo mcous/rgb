@@ -11,5 +11,5 @@
 // global objects
 TLC5940 driver;
 
-// functions
-int main (void);
+// function prototypes
+void rgb(uint16_t r, uint16_t g, uint16_t b);

@@ -1,10 +1,12 @@
 // header file for tlc5940 class for atmega chips
+#ifndef TLC5940_H
+#define TLC5940_H
 
 // headers necessary for this file
 #include <avr/io.h>
 
 // communication pins - set appropriately
-// greyscale clock - B0
+// greyscale clock - B0 - D3
 #define DDR_GSCLK  DDRB
 #define PORT_GSCLK PORTB
 #define GSCLK_PIN  0
@@ -20,11 +22,11 @@
 #define DDR_VPRG  DDRD
 #define PORT_VPRG PORTD
 #define VPRG_PIN  5
-// latch - B2
+// latch - B2 - B1
 #define DDR_XLAT  DDRB
 #define PORT_XLAT PORTB
 #define XLAT_PIN  2
-// blank outputs - B1
+// blank outputs - B1 - B2
 #define DDR_BLANK  DDRB
 #define PORT_BLANK PORTB
 #define BLANK_PIN  1
@@ -38,21 +40,22 @@ class TLC5940 {
 public:
     // constructor (don't need a destructor)
     TLC5940();
-    // initialize dot correction to 0
-    void initDC(void);
+    // initilize the chip by filling the dc data
+    void init(void);
+    // set dot correction
+    void setDC(uint8_t led, uint8_t val);
     // set the brightness of an led
     void setGS(uint8_t led, uint16_t val);
     // gs refresh function (goes in main loop)
     void refreshGS(void);
 
 private:
+    // dc array
+    uint8_t dc[16];
     // gs array
     uint16_t gs[16];
     // gs first cycle flag
     bool gsFirstCycle;
-    // gs cycle counter
-    uint16_t gsCount;
-    // data input counter
-    uint8_t dataCount;
-
 };
+
+#endif

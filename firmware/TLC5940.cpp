@@ -28,21 +28,36 @@ TLC5940::TLC5940(void) {
     PORT_MOSI &= ~(1 << MOSI_PIN);
 
     // initialize variables for safety
+    for (uint8_t i=0; i<16; i++) {
+        setDC(i, 0);
+    }
+    for (uint8_t i=0; i<16; i++) {
+        setGS(i, 0);
+    }
     gsFirstCycle = false;
-    gsCount = 0;
-    dataCount = 0;
+    //gsCount = 0;
+    //dataCount = 0;
 }
 
-// fill the dot correction register with 0s
-void TLC5940::initDC(void) {
+// initialize the dot correction
+void TLC5940::init(void) {
     // set dcprg to 1 (don't use eeprom data)
     PORT_DCPRG |= (1 << DCPRG_PIN);
     // set vprg to 1 (program dc data)
     PORT_VPRG |= (1 << VPRG_PIN);
-    // set serial data to low (setting dc to 0)
-    PORT_MOSI &= ~(1 << MOSI_PIN);
+    // set serial data to high (setting dc to 1)
+    PORT_MOSI |= (1 << MOSI_PIN);
     // pulse the serial clock 96 times to write in dc data
     for (uint8_t i=0; i<96; i++) {
+        // get the bit the tlc5940 is expecting from the gs array (tlc expects msb first)
+        uint8_t data = (dc[(95 - i)/6]) & (1 << (95 - i)%6);
+        // set mosi if bit is high, clear if bit is low
+        if (data) {
+            PORT_MOSI |= (1 << MOSI_PIN);
+        }
+        else {
+            PORT_MOSI &= ~(1 << MOSI_PIN);
+        }
         PORT_SCLK |= (1 << SCLK_PIN);
         PORT_SCLK &= ~(1 << SCLK_PIN);
     }
@@ -60,17 +75,15 @@ void TLC5940::refreshGS(void) {
         // set the first cycle flag (just came out of a dc cycle)
         gsFirstCycle = true;
     }
-    // reset gs and data counters
-    gsCount = 0;
-    dataCount = 0;
+
     // enable leds
     PORT_BLANK &= ~(1 << BLANK_PIN);
     // loop through a gs cycle and post-increment gs counter
-    while (gsCount++ < 4095) {
+    for(uint16_t gsCount = 0; gsCount < 4096; gsCount++) {
         // if there's data to clock in
-        if (dataCount < 191) {
+        if (gsCount < 192) {
             // get the bit the tlc5940 is expecting from the gs array (tlc expects msb first)
-            uint8_t data = (gs[(191 - dataCount)/12]) & (1 << (191 - dataCount)%12);
+            uint8_t data = (gs[(191 - gsCount)/12]) & (1 << (191 - gsCount)%12);
             // set mosi if bit is high, clear if bit is low
             if (data) {
                 PORT_MOSI |= (1 << MOSI_PIN);
@@ -82,7 +95,7 @@ void TLC5940::refreshGS(void) {
             PORT_SCLK |= (1 << SCLK_PIN);
             PORT_SCLK &= ~(1 << SCLK_PIN);
             // increment data counter
-            dataCount++;
+            //dataCount++;
         }
         // pulse the gs clock
         PORT_GSCLK |= (1 << GSCLK_PIN);
@@ -93,6 +106,7 @@ void TLC5940::refreshGS(void) {
     // pulse xlat to save new gs data
     PORT_XLAT |= (1 << XLAT_PIN);
     PORT_XLAT &= ~(1 << XLAT_PIN);
+
     // check if this was the first gs cycle after a dc cycle
     if (gsFirstCycle) {
         // pulse serial clock once if it is (because the datasheet tells us to)
@@ -100,6 +114,21 @@ void TLC5940::refreshGS(void) {
         PORT_SCLK &= ~(1 << SCLK_PIN);
     }
     gsFirstCycle = false;
+}
+
+// set the brightness of an individual led
+void TLC5940::setDC(uint8_t led, uint8_t val) {
+    // basic parameter checking
+    // check if led is inbounds
+    if (led < 16) {
+        // if value is out of bounds, set to max
+        if (val < 64) {
+            dc[led] = val;
+        }
+        else {
+            dc[led] = 63;
+        }
+    }
 }
 
 // set the brightness of an individual led
