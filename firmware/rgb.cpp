@@ -23,29 +23,10 @@ int main (void) {
         driver.setGS(i, 0);
     }
 
-/*
-    driver.setGS(0,  1000);
-    driver.setGS(1,  0   );
-    driver.setGS(2,  0   );
-    driver.setGS(3,  1000);
-    driver.setGS(4,  0   );
-    driver.setGS(5,  0   );
-    driver.setGS(6,  1000);
-    driver.setGS(7,  0   );
-    driver.setGS(8,  0   );
-    driver.setGS(9,  1000);
-    driver.setGS(10, 0   );
-    driver.setGS(11, 0   );
-    driver.setGS(12, 1000);
-    driver.setGS(13, 0   );
-    driver.setGS(14, 0   );
-    // Unused LED
-    driver.setGS(15, 0   );
-*/
-
     // initialize dot correction on the led driver
     driver.init();
 
+    // sine wave variables
     /*
     double a = 0;
     uint16_t red;
@@ -53,6 +34,7 @@ int main (void) {
     uint16_t blu;
     */
 
+    // two-color-combo variables
     /*
     uint16_t val[3];
     val[0] = 500;
@@ -63,15 +45,37 @@ int main (void) {
     uint16_t count = 0;
     */
 
+    // cylon variables
+    /*
     uint16_t count = 0;
     uint8_t last = 0;
     uint8_t curr = 0;
     int8_t dir = 1;
+    */
+
+    // waterfall thingy variables
+    uint8_t index = 0;
+    uint8_t dir = 1;
+    uint16_t count = 0;
+
 
     // OH MY GOD IT'S ENDLESS
     for(;;) {
+        // waterfall thingy
+        if (count > 9) {
+            count = 0;
+            driver.setGS(index, dir*500);
+            index++;
+            if (index > 14) {
+                index = 0;
+                dir ^= 1;
+            }
+        }
+        driver.refreshGS();
+        count++;
 
         // cylon stuff
+        /*
         if (count > 9) {
             count = 0;
             last = curr;
@@ -87,6 +91,7 @@ int main (void) {
         driver.setGS(curr, 500);
         driver.refreshGS();
         count++;
+        */
 
         // two-color-combo stuff
         /*
