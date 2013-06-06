@@ -27,7 +27,7 @@ TLC5940::TLC5940(void) {
     DDR_MOSI |= (1 << MOSI_PIN);
     PORT_MOSI &= ~(1 << MOSI_PIN);
 
-    // initialize variables for safety
+    // initialize variables at all leds off for safety
     for (uint8_t i=0; i<16; i++) {
         setDC(i, 0);
     }
@@ -35,8 +35,6 @@ TLC5940::TLC5940(void) {
         setGS(i, 0);
     }
     gsFirstCycle = false;
-    //gsCount = 0;
-    //dataCount = 0;
 }
 
 // initialize the dot correction
@@ -95,7 +93,6 @@ void TLC5940::refreshGS(void) {
             PORT_SCLK |= (1 << SCLK_PIN);
             PORT_SCLK &= ~(1 << SCLK_PIN);
             // increment data counter
-            //dataCount++;
         }
         // pulse the gs clock
         PORT_GSCLK |= (1 << GSCLK_PIN);
