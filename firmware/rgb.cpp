@@ -8,6 +8,7 @@
 // includes
 #include "rgb.h"
 #include <math.h>
+#include "sinetable.h"
 
 // defines
 // taylor series sin expansion
@@ -25,6 +26,12 @@ int main (void) {
 
     // initialize dot correction on the led driver
     driver.init();
+
+    // superdome variables
+    uint16_t tm = 0;
+    uint8_t val[5][3];
+    uint8_t mag = 1;
+    uint8_t shift = 64;
 
     // sine wave variables
     /*
@@ -46,10 +53,12 @@ int main (void) {
     */
 
     // cylon variables
+    /*
     uint16_t count = 0;
     uint8_t last = 0;
     uint8_t curr = 0;
     int8_t dir = 1;
+    */
 
     // waterfall thingy variables
     /*
@@ -71,6 +80,18 @@ int main (void) {
 
     // OH MY GOD IT'S ENDLESS
     for(;;) {
+        // superdome
+        if (tm > 384) {
+            tm = 0;
+        }
+        for (uint8_t i=0; i<5; i++) {
+            cosineVal(val[i], tm+shift*i);
+            driver.setGS(i*3, val[i][0]);
+            driver.setGS(i*3+1, val[i][1]);
+            driver.setGS(i*3+2, val[i][2]);
+        }
+        driver.refreshGS();
+        tm++;
 
         // TRIPLE RAINBOW
         /*
@@ -148,6 +169,7 @@ int main (void) {
         */
 
         // cylon stuff
+        /*
         if (count > 10) {
             count = 0;
             last = curr;
@@ -163,6 +185,7 @@ int main (void) {
         driver.setGS(curr, 500);
         driver.refreshGS();
         count++;
+        */
 
         // two-color-combo stuff
         /*
@@ -213,5 +236,32 @@ void rgb(uint16_t r, uint16_t g, uint16_t b) {
     }
     for (uint8_t i = 2; i < 15; i+=3) {
         driver.setGS(i, b);
+    }
+}
+
+void cosineVal(uint8_t* v, uint16_t t) {
+    uint16_t time = t;
+    while (time > 383) {
+        time -= 384;
+    }
+    uint8_t zone = time/128;
+    while (time > 127) {
+        time -= 128;
+    }
+    uint8_t cosine = sine256(time + 64);
+    if (zone == 0) {
+        v[0] = cosine;
+        v[1] = 255 - cosine;
+        v[2] = 0;
+    }
+    else if (zone == 1) {
+        v[0] = 0;
+        v[1] = cosine;
+        v[2] = 255 - cosine;
+    }
+    else {
+        v[0] = 255 - cosine;
+        v[1] = 0;
+        v[2] = cosine;
     }
 }

@@ -13,3 +13,4 @@ TLC5940 driver;
 
 // function prototypes
 void rgb(uint16_t r, uint16_t g, uint16_t b);
+void cosineVal(uint8_t* v, uint16_t t);
