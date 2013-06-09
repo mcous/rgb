@@ -30,7 +30,7 @@ int main (void) {
     // superdome variables
     uint16_t tm = 0;
     uint8_t val[5][3];
-    uint8_t mag = 1;
+    uint8_t mag = 16;
     uint8_t shift = 64;
 
     // sine wave variables
