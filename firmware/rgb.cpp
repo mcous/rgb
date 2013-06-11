@@ -29,9 +29,10 @@ int main (void) {
 
     // superdome variables
     uint16_t tm = 0;
+    uint8_t step = 1;
     uint8_t val[5][3];
-    uint8_t mag = 1;
-    uint8_t shift = 64;
+    uint8_t mag = 5;
+    uint8_t shift = 76;
 
     // sine wave variables
     /*
@@ -81,7 +82,7 @@ int main (void) {
     // OH MY GOD IT'S ENDLESS
     for(;;) {
         // superdome
-        if (tm > 384) {
+        if (tm > 383) {
             tm = 0;
         }
         for (uint8_t i=0; i<5; i++) {
@@ -91,7 +92,7 @@ int main (void) {
             driver.setGS(i*3+2, val[i][2]);
         }
         driver.refreshGS();
-        tm++;
+        tm += step;
 
         // TRIPLE RAINBOW
         /*
