@@ -28,10 +28,10 @@ TLC5940::TLC5940(void) {
     PORT_MOSI &= ~(1 << MOSI_PIN);
 
     // initialize variables at all leds off for safety
-    for (uint8_t i=0; i<16; i++) {
+    for (uint8_t i=0; i<(16 * TLC5940_N); i++) {
         setDC(i, 0);
     }
-    for (uint8_t i=0; i<16; i++) {
+    for (uint8_t i=0; i<(16 * TLC5940_N); i++) {
         setGS(i, 0);
     }
     gsFirstCycle = false;
@@ -46,9 +46,9 @@ void TLC5940::init(void) {
     // set serial data to high (setting dc to 1)
     PORT_MOSI |= (1 << MOSI_PIN);
     // pulse the serial clock 96 times to write in dc data
-    for (uint8_t i=0; i<96; i++) {
+    for (uint8_t i=0; i<(96 * TLC5940_N); i++) {
         // get the bit the tlc5940 is expecting from the gs array (tlc expects msb first)
-        uint8_t data = (dc[(95 - i)/6]) & (1 << (95 - i)%6);
+        uint8_t data = (dc[((96 * TLC5940_N) - 1 - i)/6]) & (1 << ((96 * TLC5940_N) - 1 - i)%6);
         // set mosi if bit is high, clear if bit is low
         if (data) {
             PORT_MOSI |= (1 << MOSI_PIN);
@@ -79,9 +79,9 @@ void TLC5940::refreshGS(void) {
     // loop through a gs cycle and post-increment gs counter
     for(uint16_t gsCount = 0; gsCount < 4096; gsCount++) {
         // if there's data to clock in
-        if (gsCount < 192) {
+        if (gsCount < (192 * TLC5940_N)) {
             // get the bit the tlc5940 is expecting from the gs array (tlc expects msb first)
-            uint16_t data = (gs[(191 - gsCount)/12]) & (1 << (191 - gsCount)%12);
+            uint16_t data = (gs[((192 * TLC5940_N) - 1 - gsCount)/12]) & (1 << ((192 * TLC5940_N) - 1 - gsCount)%12);
             // set mosi if bit is high, clear if bit is low
             if (data) {
                 PORT_MOSI |= (1 << MOSI_PIN);
@@ -117,7 +117,7 @@ void TLC5940::refreshGS(void) {
 void TLC5940::setDC(uint8_t led, uint8_t val) {
     // basic parameter checking
     // check if led is inbounds
-    if (led < 16) {
+    if (led < (16 * TLC5940_N)) {
         // if value is out of bounds, set to max
         if (val < 64) {
             dc[led] = val;
@@ -132,7 +132,7 @@ void TLC5940::setDC(uint8_t led, uint8_t val) {
 void TLC5940::setGS(uint8_t led, uint16_t val) {
     // basic parameter checking
     // check if led is inbounds
-    if (led < 16) {
+    if (led < (16 * TLC5940_N)) {
         // if value is out of bounds, set to max
         if (val < 4096) {
             gs[led] = val;
