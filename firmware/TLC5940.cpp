@@ -48,7 +48,7 @@ void TLC5940::init(void) {
     // pulse the serial clock 96 times to write in dc data
     for (uint8_t i=0; i<(96 * TLC5940_N); i++) {
         // get the bit the tlc5940 is expecting from the gs array (tlc expects msb first)
-        uint8_t data = (dc[((95 * TLC5940_N) - i)/6]) & (1 << ((95 * TLC5940_N) - i)%6);
+        uint8_t data = (dc[((96 * TLC5940_N) - 1 - i)/6]) & (1 << ((96 * TLC5940_N) - 1 - i)%6);
         // set mosi if bit is high, clear if bit is low
         if (data) {
             PORT_MOSI |= (1 << MOSI_PIN);
@@ -81,7 +81,7 @@ void TLC5940::refreshGS(void) {
         // if there's data to clock in
         if (gsCount < (192 * TLC5940_N)) {
             // get the bit the tlc5940 is expecting from the gs array (tlc expects msb first)
-            uint16_t data = (gs[((191 * TLC5940_N) - gsCount)/12]) & (1 << ((191 * TLC5940_N) - gsCount)%12);
+            uint16_t data = (gs[((192 * TLC5940_N) - 1 - gsCount)/12]) & (1 << ((192 * TLC5940_N) - 1 - gsCount)%12);
             // set mosi if bit is high, clear if bit is low
             if (data) {
                 PORT_MOSI |= (1 << MOSI_PIN);

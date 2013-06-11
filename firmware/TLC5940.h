@@ -36,7 +36,7 @@
 #define MOSI_PIN  3
 
 #define TLC5940_N 1
-#define dataSize 16 * TLC5940_N
+#define LED_N 16 * TLC5940_N
 
 
 class TLC5940 {
@@ -54,9 +54,9 @@ public:
 
 private:
     // dc array
-    uint8_t dc[dataSize];
+    uint8_t dc[LED_N];
     // gs array
-    uint16_t gs[dataSize];
+    uint16_t gs[LED_N];
     // gs first cycle flag
     bool gsFirstCycle;
 };
