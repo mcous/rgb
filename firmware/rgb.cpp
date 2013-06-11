@@ -31,13 +31,11 @@ int main (void) {
     uint16_t tm = 0;
     uint8_t step = 1;
     uint8_t val[5][3];
-<<<<<<< HEAD
-    uint8_t mag = 16;
-    uint8_t shift = 64;
-=======
+
+
     uint8_t mag = 5;
     uint8_t shift = 76;
->>>>>>> upstream/master
+
 
     // sine wave variables
     /*
