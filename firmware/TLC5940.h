@@ -35,6 +35,9 @@
 #define PORT_MOSI PORTB
 #define MOSI_PIN  3
 
+#define TLC5940_N 1
+#define LED_N 16 * TLC5940_N
+
 
 class TLC5940 {
 public:
@@ -51,9 +54,9 @@ public:
 
 private:
     // dc array
-    uint8_t dc[16];
+    uint8_t dc[LED_N];
     // gs array
-    uint16_t gs[16];
+    uint16_t gs[LED_N];
     // gs first cycle flag
     bool gsFirstCycle;
 };
