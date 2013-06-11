@@ -25,6 +25,11 @@ rgb led lighting. modules are (read: will be) daisy-chainable over cat5/6 cablin
   * depending on your isp, you may need to add `-P /whatever/your/port/is` after the isp name
   * per usual, [ladyada](http://www.ladyada.net/learn/avr/avrdude.html) can help
 2. navigate your terminal to rgb/firmware/
+3. first time flashing:
+  1. `$ make test` (ensures avr and isp are working)
+  2. fix any connectivity problems; this will range from unplugging your isp and plugging it back in to re-soldering your mcu
+  3. `$ make fuse` (writes correct fuse values to the avr)
+  4. `$ make test` (ensure the new fuse values match the desired ones)
 3. `$ make clean`
 4. `$ make flash`
 5. mess around with rgb.cpp and rgb.h to make different effects
