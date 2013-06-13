@@ -9,8 +9,6 @@
 #define SUPERDOME 1
 #define CYLON 2
 
-TLC5940 driver;
-
 class Effects {
 public:
 	//constructor
@@ -21,6 +19,8 @@ public:
 	void refresh();
 
 private:
+
+	TLC5940 driver;
 	//overflow counter
 	uint16_t count;
 	//3x5 array to set RGBs
