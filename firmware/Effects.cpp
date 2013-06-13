@@ -15,7 +15,6 @@ Effects::Effects() {
     for (uint8_t i=0; i<15; i++) {
         driver.setGS(i, 0);
     }
-
     // initialize dot correction on the led driver
     driver.init();
 }
@@ -35,7 +34,7 @@ void Effects::setEffect(uint8_t eff) {
 
     case CYLON:
         //current LED
-        param[1] = 0;
+        param[1] = 1;
         //last LED
         param[2] = 0;
         //direction
