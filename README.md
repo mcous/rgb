@@ -4,6 +4,10 @@ rgb led lighting. modules are (read: will be) daisy-chainable over cat5/6 cablin
 ## status
 ### what works now
 * the leds
+* a few effects
+  * cylon eye
+  * new orleans superdome-syle rainbow flow
+  * maybe some others
 
 ### what doesn't yet
 * all other features
@@ -31,15 +35,15 @@ rgb led lighting. modules are (read: will be) daisy-chainable over cat5/6 cablin
   * per usual, [ladyada](http://www.ladyada.net/learn/avr/avrdude.html) can help
 
 ### flashing instructions (mac or linux)
-1. navigate your terminal to rgb/firmware/
-2. first time flashing:
+1. plug in your isp and adjust makefile's portif necessary
+2. navigate your terminal to rgb/firmware/
+3. first time flashing:
   1. `$ make test` (ensures avr and isp are working)
   2. fix any connectivity problems; this will range from unplugging your isp and plugging it back in to re-soldering your mcu
   3. `$ make fuse` (writes correct fuse values to the avr)
   4. `$ make test` (ensure the new fuse values match the desired ones)
-3. `$ make clean`
-4. `$ make flash`
-5. mess around with Effects.cpp and Effects.h to make different effects
+4. `$ make clean`
+5. `$ make flash`
 
 ### instructions (windows)
 1. google
