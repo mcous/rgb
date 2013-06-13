@@ -1,4 +1,4 @@
-// low level tlc5940 class for atmega microcontrollers
+ // low level tlc5940 class for atmega microcontrollers
 
 #include "TLC5940.h"
 
