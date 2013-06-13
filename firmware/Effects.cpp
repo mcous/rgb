@@ -1,11 +1,15 @@
-//Effects file
+// rgb
+// daisy-chainable lighting module
+// http://github.com/mcous/rgb
+//
+// copyright 2013 michael cousins and authors listed in http://github.com/mcous/rgb/AUTHORS.md
+// shared under the terms of the mit licence
 
+// light effects class using a tlc5940
+
+// header files
 #include "Effects.h"
-#include <math.h>
 #include "sinetable.h"
-// defines
-// taylor series sin expansion
-//#define sin_t(a) (a-(pow(a,3.0)/6.0)+(pow(a,5.0)/120.0)-(pow(a,7.0)/5040.0))
 
 Effects::Effects() {
     for (uint8_t i=0; i<15; i++) {

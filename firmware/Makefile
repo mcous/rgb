@@ -1,7 +1,11 @@
-# makefile for rgb project
-#
-# written by michael cousins
+# rgb
+# daisy-chainable lighting module
 # http://github.com/mcous/rgb
+#
+# copyright 2013 michael cousins and authors listed in http://github.com/mcous/rgb/AUTHORS.md
+# shared under the terms of the mit licence 
+
+# makefile
 #
 # targets:
 #   all:    compiles the source code
@@ -43,7 +47,7 @@ AVRDUDE = avrdude -c $(PRG) -p $(MCU)
 OBJCOPY = avr-objcopy
 OBJDUMP = avr-objdump
 SIZE    = avr-size --format=avr --mcu=$(MCU)
-CC 	    = avr-gcc
+CC      = avr-gcc
 
 # generate list of objects
 CFILES    = $(filter %.c, $(SRC))

@@ -1,8 +1,8 @@
-license for rgb/firmware
-=========================
+# license for rgb/firmware
+
 work in this directory (http://github.com/mcous/rgb/firmware/) is shared under the terms of the mit license.
 
-copyright 2013 by michael cousins (http://github.com/mcous)
+copyright 2013 by [michael cousins](http://github.com/mcous) and authors listed in [AUTHORS.md](http://github.com/mcous/rgb/AUTHORS.md)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -51,7 +51,7 @@ rgb led lighting. modules are (read: will be) daisy-chainable over cat5/6 cablin
 ## hardware
 ### requirements
 * [KiCad eda software suite](http://kicad-pcb.org)
-* KiCad libraries from http://github.com/mcous/kicad-lib
+* [these KiCad libraries](http://github.com/mcous/kicad-lib)
 
 ### instructions
 1. open kicad

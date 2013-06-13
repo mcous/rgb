@@ -1,3 +1,13 @@
+// rgb
+// daisy-chainable lighting module
+// http://github.com/mcous/rgb
+//
+// copyright 2013 michael cousins and authors listed in http://github.com/mcous/rgb/AUTHORS.md
+// shared under the terms of the mit licence
+
+// 256 8-bit values corresponding to a complete sine wave stored in program memory
+// sine wave values copied from http://interface.khm.de/index.php/lab/experiments/arduino-dds-sinewave-generator/
+
 #ifndef SINETABLE_H
 #define SINETABLE_H
 
