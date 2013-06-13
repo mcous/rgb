@@ -2,6 +2,6 @@
 
 Michael Cousins         - http://github.com/mcous
 
-Jenna Jenna deBoisblanc - http://github.com/jdeboi
+Jenna deBoisblanc - http://github.com/jdeboi
 
 Tim Cousins             - http://github.com/tac2155
