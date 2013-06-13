@@ -11,7 +11,7 @@
 
 int main (void) {
 
-	lightShow.setEffect(1);
+	lightShow.setEffect(2);
 
 	for(;;) {
 		lightShow.refresh();
