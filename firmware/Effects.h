@@ -33,7 +33,7 @@ private:
 
 
 	//current effect function handle
-	void (*cF)(void);
+	void (Effects::*cF)(void);
 	//superdome show
 	void superDome(void);
 	//cylon

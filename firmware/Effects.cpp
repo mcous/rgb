@@ -29,7 +29,8 @@ void Effects::setEffect(uint8_t eff) {
         
         //speed of functions
         step = 1;
-        cF = (void *)Effects::&superDome;
+
+        cF = &Effects::superDome;
         break;
 
     case CYLON:
@@ -50,11 +51,11 @@ void Effects::setEffect(uint8_t eff) {
 
 void Effects::refresh() {
     count += step;
-    (*cF)();
+    (*this.*cF)();
 }
 
 
-void * Effects::superDome(void *) {
+void Effects::superDome(void) {
     //super dome effect function   
 
     if (count > 383) {
