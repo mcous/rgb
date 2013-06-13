@@ -24,17 +24,18 @@ PRG = usbtiny
 LFU = 0xFF
 HFU = 0xDE
 EFU = 0x05
-# program source files (not including libraries)
+# program source files (not external libraries)
 SRC = $(PRJ).cpp Effects.cpp
-# where to look for libraries (consisting of a .cpp and .h files)
+# where to look for aditional libraries (consisting of a .cpp and .h files)
 LIB  = ../../TLC5940
 
 ##########################################################################################
 # stuff nobody needs to worry about until such time that worrying about it is appropriate
-# flags
+# c flags
 CFLAGS 	 = -Wall -Os -DF_CPU=$(CLK) -mmcu=$(MCU)
 # library locations
 CFLAGS  += $(foreach dir, $(LIB), -I$(dir))
+# any aditional flags for c++
 CPPFLAGS =
 
 # executables
@@ -44,7 +45,7 @@ OBJDUMP = avr-objdump
 SIZE    = avr-size --format=avr --mcu=$(MCU)
 CC 	    = avr-gcc
 
-# generate list of objects objects
+# generate list of objects
 CFILES    = $(filter %.c, $(SRC))
 CPPFILES  = $(filter %.cpp, $(SRC))
 LIBFILES := $(foreach dir, $(LIB), $(wildcard $(dir)/*.cpp))
