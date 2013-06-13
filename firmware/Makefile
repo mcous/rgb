@@ -26,13 +26,14 @@ HFU = 0xDE
 EFU = 0x05
 # program source files (not including libraries)
 SRC = $(PRJ).cpp Effects.cpp
-# where to look for libraries (consisting of a .cpp and a .h files)
-LIB = ../../TLC5940
+# where to look for libraries (consisting of a .cpp and .h files)
+LIB  = ../../TLC5940
 
 ##########################################################################################
 # stuff nobody needs to worry about until such time that worrying about it is appropriate
 # flags
 CFLAGS 	 = -Wall -Os -DF_CPU=$(CLK) -mmcu=$(MCU)
+# library locations
 CFLAGS  += $(foreach dir, $(LIB), -I$(dir))
 CPPFLAGS =
 
@@ -72,7 +73,7 @@ disasm: $(PRJ).elf
 # remove compiled files
 clean:
 	rm -f *.hex *.elf *.o
-	$(foreach dir, $(LIB), rm -f $(dir)/*.o)
+	$(foreach dir, $(LIB), rm -f $(dir)/*.o;)
 
 # other targets
 # objects from c files
