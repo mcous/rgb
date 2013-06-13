@@ -25,7 +25,7 @@ LFU = 0xFF
 HFU = 0xDE
 EFU = 0x05
 # program source files (c and/or c++)
-SRC = $(PRJ).cpp TLC5940.cpp
+SRC = TLC5940.cpp Effects.cpp $(PRJ).cpp
 
 ##########################################################################################
 # stuff nobody needs to worry about until such time that worrying about it is appropriate
